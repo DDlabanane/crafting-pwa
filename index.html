@@ -2,11 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- The viewport tag tells the mobile browser to use the device's actual width
+         and prevents the user from zooming in/out, which makes it feel like a native app -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Minecraft Crafting Guide</title>
+
+    <!-- The manifest links to the JSON file that tells the phone this is an installable PWA -->
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="style.css">
-    <!-- iOS Support -->
+
+    <!-- iOS Specific Tags: These are required for the "Add to Home Screen" experience
+         'apple-mobile-web-app-capable' removes the Safari browser address bar and buttons -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="MC Guide">
@@ -15,40 +21,44 @@
     <header>
         <h1>Minecraft Crafting</h1>
         <div class="search-container">
+            <!-- 'id' is like a unique name. We use it in app.js to find this input and read what the user types -->
             <input type="text" id="search-input" placeholder="Search recipes...">
-        </div>
+        </div >
         <nav id="category-nav">
+            <!-- This button is the default. Other buttons (Tools, Food, etc.) will be added here by JavaScript -->
             <button class="cat-btn active" data-category="All">All</button>
-            <!-- Categories will be added dynamically -->
         </nav>
     </header>
 
     <main id="app">
-        <div id="recipe-list" class="recipe-grid">
-            <!-- Recipes will be injected here -->
-        </div>
+        <!-- The 'recipe-grid' is where the list of all item cards will be generated -->
+        <div id="recipe-list" class="recipe-grid"></div>
 
+        <!-- The 'detail-view' is the screen that pops up when you click a recipe.
+             The 'hidden' class in CSS makes it invisible until we remove it with JS -->
         <div id="recipe-detail" class="detail-view hidden">
             <button id="back-btn">← Back</button>
             <div class="detail-content">
                 <h2 id="detail-name">Recipe Name</h2>
                 <div class="crafting-area">
-                    <div id="crafting-grid" class="crafting-grid">
-                        <!-- Grid cells injected here -->
-                    </div>
+                    <!-- This div will hold the 3x3 or 2x2 grid of items -->
+                    <div id="crafting-grid" class="crafting-grid"></div>
                     <div class="result-area">
                         <div class="arrow">→</div>
                         <div id="result-item" class="item-slot"></div>
-                    </div>
-                </div>
+                    </div >
+                </div >
                 <h3>Ingredients</h3>
+                <!-- A simple list where we will add the text: "3x Diamond" etc. -->
                 <ul id="ingredients-list"></ul>
-            </div>
-        </div>
+            </div >
+        </div >
     </main>
 
     <script src="app.js"></script>
     <script>
+        /* This small block of code checks if the browser supports 'Service Workers'.
+           If it does, it registers 'sw.js' which handles the offline caching. */
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('sw.js')

@@ -1,4 +1,7 @@
 :root {
+    /* CSS Variables: These are like "shortcuts".
+       Instead of typing #1e1e1e everywhere, we use --bg-color.
+       If you want to change the theme, you only have to change it here once! */
     --bg-color: #1e1e1e;
     --header-color: #3c8527;
     --text-color: #ffffff;
@@ -9,16 +12,21 @@
 }
 
 * {
+    /* box-sizing: border-box ensures that padding doesn't make
+       an element wider than the width you set. Very important for layouts! */
     box-sizing: border-box;
+    /* Removes the blue highlight that appears on iPhone when you tap a button */
     -webkit-tap-highlight-color: transparent;
 }
 
 body {
+    /* System fonts: This uses the native iPhone font for a "native app" look */
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
     margin: 0;
     padding: 0;
+    /* Prevents the page from shaking or scrolling horizontally */
     overflow-x: hidden;
 }
 
@@ -26,6 +34,7 @@ header {
     background-color: var(--header-color);
     padding: 20px 15px;
     text-align: center;
+    /* sticky keeps the header at the top even when you scroll down */
     position: sticky;
     top: 0;
     z-index: 100;
@@ -58,8 +67,10 @@ h1 {
 #category-nav {
     display: flex;
     gap: 8px;
+    /* overflow-x: auto allows the categories to be swiped left/right on mobile */
     overflow-x: auto;
     padding-bottom: 10px;
+    /* These hide the scrollbar so it looks cleaner */
     scrollbar-width: none;
 }
 
@@ -73,6 +84,7 @@ h1 {
     color: white;
     padding: 6px 12px;
     border-radius: 15px;
+    /* white-space: nowrap prevents the text from wrapping to a second line */
     white-space: nowrap;
     cursor: pointer;
     font-size: 0.9rem;
@@ -85,6 +97,7 @@ h1 {
 }
 
 .recipe-grid {
+    /* Grid Layout: 'auto-fill' automatically decides how many columns fit based on screen size */
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
     gap: 15px;
@@ -97,11 +110,13 @@ h1 {
     padding: 15px;
     text-align: center;
     cursor: pointer;
+    /* Transition makes the scale effect smooth */
     transition: transform 0.1s;
     border: 1px solid transparent;
 }
 
 .recipe-card:active {
+    /* :active triggers when the user is currently pressing the element */
     transform: scale(0.95);
     border-color: var(--accent-color);
 }
@@ -115,12 +130,14 @@ h1 {
 .recipe-card span {
     display: block;
     font-size: 0.85rem;
+    /* These three lines together create the "..." (ellipsis) if the text is too long */
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
 .detail-view {
+    /* fixed position covers the entire screen regardless of where you scrolled */
     position: fixed;
     top: 0;
     left: 0;
@@ -133,6 +150,7 @@ h1 {
 }
 
 .detail-view.hidden {
+    /* used by JavaScript to show/hide the detail screen */
     display: none;
 }
 

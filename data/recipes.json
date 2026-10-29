@@ -6,43 +6,167 @@
     "result": "diamond_pickaxe",
     "gridSize": 3,
     "grid": [
-      ["diamond", "diamond", "diamond"],
-      [null, "stick", null],
-      [null, "stick", null]
+      [
+        "diamond",
+        "diamond",
+        "diamond"
+      ],
+      [
+        null,
+        "stick",
+        null
+      ],
+      [
+        null,
+        "stick",
+        null
+      ]
     ],
     "ingredients": [
-      {"item": "diamond", "count": 3},
-      {"item": "stick", "count": 2}
+      {
+        "item": "diamond",
+        "count": 3
+      },
+      {
+        "item": "stick",
+        "count": 2
+      }
     ]
   },
   {
-    "id": "crafting_table",
-    "name": "Crafting Table",
-    "category": "Utility",
-    "result": "crafting_table",
-    "gridSize": 2,
-    "grid": [
-      ["planks", "planks"],
-      ["planks", "planks"]
-    ],
-    "ingredients": [
-      {"item": "planks", "count": 4}
-    ]
-  },
-  {
-    "id": "torch",
-    "name": "Torch",
-    "category": "Utility",
-    "result": "torch",
+    "id": "diamond_axe",
+    "name": "Diamond Axe",
+    "category": "Tools",
+    "result": "diamond_axe",
     "gridSize": 3,
     "grid": [
-      [null, "coal", null],
-      [null, "stick", null],
-      [null, null, null]
+      [
+        "diamond",
+        "diamond",
+        null
+      ],
+      [
+        "diamond",
+        "stick",
+        null
+      ],
+      [
+        null,
+        "stick",
+        null
+      ]
     ],
     "ingredients": [
-      {"item": "coal", "count": 1},
-      {"item": "stick", "count": 1}
+      {
+        "item": "diamond",
+        "count": 3
+      },
+      {
+        "item": "stick",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "id": "diamond_shovel",
+    "name": "Diamond Shovel",
+    "category": "Tools",
+    "result": "diamond_shovel",
+    "gridSize": 3,
+    "grid": [
+      [
+        "diamond",
+        null,
+        null
+      ],
+      [
+        null,
+        "stick",
+        null
+      ],
+      [
+        null,
+        "stick",
+        null
+      ]
+    ],
+    "ingredients": [
+      {
+        "item": "diamond",
+        "count": 1
+      },
+      {
+        "item": "stick",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "id": "diamond_hoe",
+    "name": "Diamond Hoe",
+    "category": "Tools",
+    "result": "diamond_hoe",
+    "gridSize": 3,
+    "grid": [
+      [
+        "diamond",
+        null,
+        null
+      ],
+      [
+        "diamond",
+        "stick",
+        null
+      ],
+      [
+        null,
+        "stick",
+        null
+      ]
+    ],
+    "ingredients": [
+      {
+        "item": "diamond",
+        "count": 2
+      },
+      {
+        "item": "stick",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "id": "diamond_sword",
+    "name": "Diamond Sword",
+    "category": "Combat",
+    "result": "diamond_sword",
+    "gridSize": 3,
+    "grid": [
+      [
+        null,
+        "diamond",
+        null
+      ],
+      [
+        null,
+        "diamond",
+        null
+      ],
+      [
+        null,
+        "stick",
+        null
+      ]
+    ],
+    "ingredients": [
+      {
+        "item": "diamond",
+        "count": 2
+      },
+      {
+        "item": "stick",
+        "count": 1
+      }
     ]
   },
   {
@@ -52,13 +176,302 @@
     "result": "iron_sword",
     "gridSize": 3,
     "grid": [
-      [null, "iron_ingot", null],
-      [null, "iron_ingot", null],
-      [null, "stick", null]
+      [
+        null,
+        "iron",
+        null
+      ],
+      [
+        null,
+        "iron",
+        null
+      ],
+      [
+        null,
+        "stick",
+        null
+      ]
     ],
     "ingredients": [
-      {"item": "iron_ingot", "count": 2},
-      {"item": "stick", "count": 1}
+      {
+        "item": "iron",
+        "count": 2
+      },
+      {
+        "item": "stick",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": "bow",
+    "name": "Bow",
+    "category": "Combat",
+    "result": "bow",
+    "gridSize": 3,
+    "grid": [
+      [
+        null,
+        "string",
+        null
+      ],
+      [
+        "stick",
+        "string",
+        null
+      ],
+      [
+        "stick",
+        null,
+        null
+      ]
+    ],
+    "ingredients": [
+      {
+        "item": "string",
+        "count": 2
+      },
+      {
+        "item": "stick",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "id": "diamond_helmet",
+    "name": "Diamond Helmet",
+    "category": "Armor",
+    "result": "diamond_helmet",
+    "gridSize": 3,
+    "grid": [
+      [
+        "diamond",
+        "diamond",
+        "diamond"
+      ],
+      [
+        "diamond",
+        null,
+        "diamond"
+      ],
+      [
+        "diamond",
+        "diamond",
+        "diamond"
+      ]
+    ],
+    "ingredients": [
+      {
+        "item": "diamond",
+        "count": 8
+      }
+    ]
+  },
+  {
+    "id": "diamond_chestplate",
+    "name": "Diamond Chestplate",
+    "category": "Armor",
+    "result": "diamond_chestplate",
+    "gridSize": 3,
+    "grid": [
+      [
+        "diamond",
+        "diamond",
+        "diamond"
+      ],
+      [
+        "diamond",
+        "diamond",
+        "diamond"
+      ],
+      [
+        "diamond",
+        "diamond",
+        "diamond"
+      ]
+    ],
+    "ingredients": [
+      {
+        "item": "diamond",
+        "count": 9
+      }
+    ]
+  },
+  {
+    "id": "diamond_leggings",
+    "name": "Diamond Leggings",
+    "category": "Armor",
+    "result": "diamond_leggings",
+    "gridSize": 3,
+    "grid": [
+      [
+        "diamond",
+        null,
+        "diamond"
+      ],
+      [
+        "diamond",
+        "diamond",
+        "diamond"
+      ],
+      [
+        "diamond",
+        null,
+        "diamond"
+      ]
+    ],
+    "ingredients": [
+      {
+        "item": "diamond",
+        "count": 7
+      }
+    ]
+  },
+  {
+    "id": "diamond_boots",
+    "name": "Diamond Boots",
+    "category": "Armor",
+    "result": "diamond_boots",
+    "gridSize": 3,
+    "grid": [
+      [
+        "diamond",
+        null,
+        "diamond"
+      ],
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        "diamond",
+        null,
+        "diamond"
+      ]
+    ],
+    "ingredients": [
+      {
+        "item": "diamond",
+        "count": 4
+      }
+    ]
+  },
+  {
+    "id": "crafting_table",
+    "name": "Crafting Table",
+    "category": "Utility",
+    "result": "crafting_table",
+    "gridSize": 2,
+    "grid": [
+      [
+        "planks",
+        "planks"
+      ],
+      [
+        "planks",
+        "planks"
+      ]
+    ],
+    "ingredients": [
+      {
+        "item": "planks",
+        "count": 4
+      }
+    ]
+  },
+  {
+    "id": "furnace",
+    "name": "Furnace",
+    "category": "Utility",
+    "result": "furnace",
+    "gridSize": 3,
+    "grid": [
+      [
+        "cobble",
+        "cobble",
+        "cobble"
+      ],
+      [
+        "cobble",
+        null,
+        "cobble"
+      ],
+      [
+        "cobble",
+        "cobble",
+        "cobble"
+      ]
+    ],
+    "ingredients": [
+      {
+        "item": "cobble",
+        "count": 8
+      }
+    ]
+  },
+  {
+    "id": "chest",
+    "name": "Chest",
+    "category": "Utility",
+    "result": "chest",
+    "gridSize": 3,
+    "grid": [
+      [
+        "planks",
+        "planks",
+        "planks"
+      ],
+      [
+        "planks",
+        null,
+        "planks"
+      ],
+      [
+        "planks",
+        "planks",
+        "planks"
+      ]
+    ],
+    "ingredients": [
+      {
+        "item": "planks",
+        "count": 8
+      }
+    ]
+  },
+  {
+    "id": "torch",
+    "name": "Torch",
+    "category": "Utility",
+    "result": "torch",
+    "gridSize": 3,
+    "grid": [
+      [
+        null,
+        "coal",
+        null
+      ],
+      [
+        null,
+        "stick",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "ingredients": [
+      {
+        "item": "coal",
+        "count": 1
+      },
+      {
+        "item": "stick",
+        "count": 1
+      }
     ]
   },
   {
@@ -68,12 +481,69 @@
     "result": "bread",
     "gridSize": 3,
     "grid": [
-      [null, null, null],
-      ["wheat", "wheat", "wheat"],
-      [null, null, null]
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        "wheat",
+        "wheat",
+        "wheat"
+      ],
+      [
+        null,
+        null,
+        null
+      ]
     ],
     "ingredients": [
-      {"item": "wheat", "count": 3}
+      {
+        "item": "wheat",
+        "count": 3
+      }
+    ]
+  },
+  {
+    "id": "cake",
+    "name": "Cake",
+    "category": "Food",
+    "result": "cake",
+    "gridSize": 3,
+    "grid": [
+      [
+        "milk",
+        "sugar",
+        "egg"
+      ],
+      [
+        "milk",
+        "milk",
+        "milk"
+      ],
+      [
+        "wheat",
+        "wheat",
+        "wheat"
+      ]
+    ],
+    "ingredients": [
+      {
+        "item": "milk",
+        "count": 4
+      },
+      {
+        "item": "sugar",
+        "count": 1
+      },
+      {
+        "item": "egg",
+        "count": 1
+      },
+      {
+        "item": "wheat",
+        "count": 3
+      }
     ]
   }
 ]
