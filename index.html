@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Minecraft Crafting Guide</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <!-- iOS Support -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="MC Guide">
+</head>
+<body>
+    <header>
+        <h1>Minecraft Crafting</h1>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search recipes...">
+        </div>
+        <nav id="category-nav">
+            <button class="cat-btn active" data-category="All">All</button>
+            <!-- Categories will be added dynamically -->
+        </nav>
+    </header>
+
+    <main id="app">
+        <div id="recipe-list" class="recipe-grid">
+            <!-- Recipes will be injected here -->
+        </div>
+
+        <div id="recipe-detail" class="detail-view hidden">
+            <button id="back-btn">← Back</button>
+            <div class="detail-content">
+                <h2 id="detail-name">Recipe Name</h2>
+                <div class="crafting-area">
+                    <div id="crafting-grid" class="crafting-grid">
+                        <!-- Grid cells injected here -->
+                    </div>
+                    <div class="result-area">
+                        <div class="arrow">→</div>
+                        <div id="result-item" class="item-slot"></div>
+                    </div>
+                </div>
+                <h3>Ingredients</h3>
+                <ul id="ingredients-list"></ul>
+            </div>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then(reg => console.log('SW registered'))
+                    .catch(err => console.log('SW registration failed', err));
+            });
+        }
+    </script>
+</body>
+</html>

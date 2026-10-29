@@ -1,0 +1,79 @@
+[
+  {
+    "id": "diamond_pickaxe",
+    "name": "Diamond Pickaxe",
+    "category": "Tools",
+    "result": "diamond_pickaxe",
+    "gridSize": 3,
+    "grid": [
+      ["diamond", "diamond", "diamond"],
+      [null, "stick", null],
+      [null, "stick", null]
+    ],
+    "ingredients": [
+      {"item": "diamond", "count": 3},
+      {"item": "stick", "count": 2}
+    ]
+  },
+  {
+    "id": "crafting_table",
+    "name": "Crafting Table",
+    "category": "Utility",
+    "result": "crafting_table",
+    "gridSize": 2,
+    "grid": [
+      ["planks", "planks"],
+      ["planks", "planks"]
+    ],
+    "ingredients": [
+      {"item": "planks", "count": 4}
+    ]
+  },
+  {
+    "id": "torch",
+    "name": "Torch",
+    "category": "Utility",
+    "result": "torch",
+    "gridSize": 3,
+    "grid": [
+      [null, "coal", null],
+      [null, "stick", null],
+      [null, null, null]
+    ],
+    "ingredients": [
+      {"item": "coal", "count": 1},
+      {"item": "stick", "count": 1}
+    ]
+  },
+  {
+    "id": "iron_sword",
+    "name": "Iron Sword",
+    "category": "Combat",
+    "result": "iron_sword",
+    "gridSize": 3,
+    "grid": [
+      [null, "iron_ingot", null],
+      [null, "iron_ingot", null],
+      [null, "stick", null]
+    ],
+    "ingredients": [
+      {"item": "iron_ingot", "count": 2},
+      {"item": "stick", "count": 1}
+    ]
+  },
+  {
+    "id": "bread",
+    "name": "Bread",
+    "category": "Food",
+    "result": "bread",
+    "gridSize": 3,
+    "grid": [
+      [null, null, null],
+      ["wheat", "wheat", "wheat"],
+      [null, null, null]
+    ],
+    "ingredients": [
+      {"item": "wheat", "count": 3}
+    ]
+  }
+]
