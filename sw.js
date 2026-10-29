@@ -1,11 +1,13 @@
 const CACHE_NAME = 'mc-crafting-v1';
+// We use a base path for GitHub Pages subfolders
+const BASE_PATH = '/crafting-pwa/';
+
 const ASSETS = [
-  '/',
-  '/index.html',
-  '/style.css',
-  '/app.js',
-  '/manifest.json',
-  '/data/recipes.json'
+  `${BASE_PATH}index.html`,
+  `${BASE_PATH}style.css`,
+  `${BASE_PATH}app.js`,
+  `${BASE_PATH}manifest.json`,
+  `${BASE_PATH}data/recipes.json`
 ];
 
 self.addEventListener('install', (event) => {
