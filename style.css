@@ -154,6 +154,11 @@ h1 {
     display: none;
 }
 
+.crafting-grid.hidden {
+    display: none;
+}
+
+
 #back-btn {
     background: none;
     border: none;
