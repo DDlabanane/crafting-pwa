@@ -27,6 +27,20 @@ async function initApp() {
         categoryNav.appendChild(btn);
     });
 
+    function createItemHtml(itemId) {
+        if (!itemId) return '';
+        // Using the community-maintained Minecraft Item Assets CDN
+        // This provides the isometric inventory icons
+        const iconUrl = `https://minecraft-items.com/icons/${itemId}.png`;
+
+        return `
+            <img src="${iconUrl}"
+                 onerror="this.onerror=null; this.style.display='none'; this.nextSibling.style.display='block';"
+                 alt="${itemId}">
+            <span style="display:none">${itemId}</span>
+        `;
+    }
+
     function renderList() {
         recipeList.innerHTML = '';
         const filtered = recipes.filter(r => {
@@ -38,8 +52,11 @@ async function initApp() {
         filtered.forEach(recipe => {
             const card = document.createElement('div');
             card.className = 'recipe-card';
+
+            const itemHtml = createItemHtml(recipe.result);
+
             card.innerHTML = `
-                <div class="slot" style="margin: 0 auto 10px auto">${recipe.result}</div>
+                <div class="slot" style="margin: 0 auto 10px auto">${itemHtml}</div>
                 <span>${recipe.name}</span>
             `;
             card.onclick = () => showDetail(recipe);
@@ -53,9 +70,7 @@ async function initApp() {
         const resEl = document.getElementById('result-item');
         const ingEl = document.getElementById('ingredients-list');
 
-        // NEW: Handle different recipe types in the UI
         if (recipe.type === 'shaped' || recipe.type === 'shapeless') {
-            // Show the Crafting Grid
             gridEl.classList.remove('hidden');
             gridEl.style.gridTemplateColumns = `repeat(${recipe.gridSize || 3}, 50px)`;
             gridEl.innerHTML = '';
@@ -63,20 +78,19 @@ async function initApp() {
             recipe.grid.flat().forEach(item => {
                 const slot = document.createElement('div');
                 slot.className = 'slot';
-                slot.textContent = item || '';
+                slot.innerHTML = item ? createItemHtml(item) : '';
                 gridEl.appendChild(slot);
             });
         } else {
-            // Hide grid for Smelting, Smithing, etc.
             gridEl.classList.add('hidden');
         }
 
-        resEl.textContent = recipe.result;
+        resEl.innerHTML = createItemHtml(recipe.result);
 
         ingEl.innerHTML = '';
         recipe.ingredients.forEach(ing => {
             const li = document.createElement('li');
-            li.textContent = `${ing.count}x ${ing.item}`;
+            li.innerHTML = `${createItemHtml(ing.item)} ${ing.count}x ${ing.item}`;
             ingEl.appendChild(li);
         });
 
