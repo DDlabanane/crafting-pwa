@@ -202,11 +202,11 @@ h1 {
     overflow: hidden;
 }
 
-.slot img {
-    width: 80%;
-    height: 80%;
+.slot img, .result-area img, #ingredients-list img {
+    width: 32px;
+    height: 32px;
     object-fit: contain;
-    image-rendering: pixelated; /* CRITICAL: keeps Minecraft pixels sharp, not blurry */
+    image-rendering: pixelated;
 }
 
 .result-area {
@@ -228,6 +228,13 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.item-slot img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    image-rendering: pixelated;
 }
 
 #ingredients-list {
