@@ -29,13 +29,12 @@ async function initApp() {
 
     function createItemHtml(itemId) {
         if (!itemId) return '';
-        // Using the community-maintained Minecraft Item Assets CDN
-        // This provides the isometric inventory icons
-        const iconUrl = `https://minecraft-items.com/icons/${itemId}.png`;
+        // Now using the local folder you just populated
+        const iconUrl = `data/texture/${itemId}.png`;
 
         return `
             <img src="${iconUrl}"
-                 onerror="this.onerror=null; this.style.display='none'; this.nextSibling.style.display='block';"
+                 onerror="this.onerror=null; this.style.display='none';"
                  alt="${itemId}">
             <span style="display:none">${itemId}</span>
         `;

@@ -1,6 +1,6 @@
 {
   "name": "Minecraft Crafting Guide",
-  "short_name": "MCGuide",
+  "short_name": "Crafting",
   "start_url": "/crafting-pwa/",
   "display": "standalone",
   "background_color": "#1e1e1e",
